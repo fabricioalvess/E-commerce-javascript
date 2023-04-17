@@ -1,0 +1,162 @@
+
+.nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    height: 100px;
+    color: rgb(255, 255, 255);
+    box-shadow:  0 0 100px 10px #080524;
+    position: fixed;
+    top: 0;
+    background-color:#070A52;
+    font-weight: bold;
+    
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    min-width: 25%;
+    width: 25%;
+    height: 100px;
+    
+    
+
+}
+.nav ul li{
+    list-style: none;
+    padding-left: 40px;
+}
+.logo{
+    display: flex;
+    min-width: 25%;
+    width: 25%;
+    height: 100px;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 800;
+    font-size: 200%;
+   
+}
+.imputPesquisa{
+    width: 25%;
+    min-width: 25%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imputPesquisa i{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.nav input{
+    font-size: 1.2em;
+    width: 80%;
+    height: 60px;
+    border:none;
+    border-radius: 100px;
+    padding: 0 0 0 50px;
+
+    
+}
+.fa-solid {
+    margin-left: 10px;
+}
+.nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.menu-responsivo{
+    display: none;
+}
+.botao-menu-responsivo{
+    display: none;
+}
+i{
+    display: none;
+}
+
+@media (max-width: 862px)
+{
+    
+    .ativa{
+        display: initial;
+        
+    }
+
+    .menu-responsivo ul{
+        box-shadow: inset 0 0 100px 10px #570d61;
+        width: 90%;
+        background-color:#71087f;
+        height: 90vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: first baseline;
+        list-style: none;
+        padding-top: 50px;
+        border-bottom-left-radius: 100px;
+    }
+    .menu-responsivo ul li a{
+        color: white;
+        text-decoration: none;
+        
+    }
+    .menu-responsivo ul li{
+        padding: 20px 0;
+        
+    }
+    .menu{
+        display: none;
+    }
+    .imputPesquisa{
+        display: none;
+    }
+    .nav input{
+        display: none;
+    }
+    .botao-menu-responsivo{
+        display: initial;
+        width: 50%;
+        
+    }
+    .menuResponsivo{
+        width: 50%;
+        height: 100px;
+        display: flex;
+    }
+    .botao-menu-responsivo {
+        width: 50%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .botao-menu-responsivo i{
+       width: 100%;
+       height: 100px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+        
+    }
+   
+    .logo{
+        width: 50%;
+        font-size: 1.5em;
+        padding-left: 10px;
+    }
+    i{
+        display: initial;
+    }
+}

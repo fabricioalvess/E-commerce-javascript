@@ -1,0 +1,12 @@
+.bannerInicial{
+    width: 100%;
+    height: 75vh;
+    background-image: url('../img/bannerSurf.png'); 
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

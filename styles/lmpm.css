@@ -1,0 +1,25 @@
+.carrosellmpm{
+    width: 75%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    margin-top:25px;
+    padding: 0;
+}
+.grupoDeImagenslmpm{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.boxProdutolmpm{
+    width: 30%;
+}
+.boxProdutolmpm img{
+    width: 100%;
+    padding: 0 20px;
+}
