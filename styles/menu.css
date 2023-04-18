@@ -36,7 +36,7 @@
     justify-content: flex-start;
     align-items: center;
     font-weight: 800;
-    font-size: 200%;
+    font-size: 180%;
    
 }
 .imputPesquisa{
@@ -55,7 +55,7 @@
     align-items: center;
 }
 .nav input{
-    font-size: 1.2em;
+    font-size: 1em;
     width: 80%;
     height: 60px;
     border:none;
@@ -70,7 +70,7 @@
 .nav ul li a{
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
 }
 .menu-responsivo{
     display: none;
@@ -81,7 +81,23 @@
 i{
     display: none;
 }
+.categoriaProduto{
+    margin-top: 100px;
+    display: flex;
+    width: 100%;
+    height: 50px;
+   justify-content: space-around;
+   align-items: center;
+   background-color: #dfdfdf;
+   position: fixed;
+   top: 0px;
+}
 
+.categoriaProduto button{
+    background-color: #dfdfdf;
+    border: none;
+    font-size: 16px;
+}
 @media (max-width: 862px)
 {
     
