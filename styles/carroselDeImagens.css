@@ -6,7 +6,11 @@
     align-items: center;
     flex-direction: column;
     color: #cecece;
+    animation-name: banners;
+	animation-duration: 1s;
+ 
 }
+
 #conteudo_sobre{
     display: flex;
     flex-direction: column;
@@ -19,7 +23,7 @@
     width: 100%;
     justify-content:center;
     align-items:center;
-    height: 15px;
+    height: 50px;
     cursor: pointer;
  
 }
@@ -49,5 +53,7 @@
     height: 64vh;
     display: flex;
     justify-content: center;
+    animation-name: banners;
+	animation-duration: 1s;
    
 }

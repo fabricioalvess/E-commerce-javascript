@@ -18,18 +18,20 @@ function criandoProdutos(produto){
     })  
 }
 
+
+
 //----------------------------------------------------------------------
-function mostrarBanner(){
-    const banner = document.getElementById('bannerInicial')
-    const div = document.createElement('div')
-    div.classList.add('bannerInicial')
-    const imge = document.createElement('img')
-    imge.classList.add("ajusteOTamanhoDaImagemDoBanner")
-    imge.src="https://raw.githubusercontent.com/fabricioalvess/E-commerce-javascript/master/img/banner1.png"
-    div.appendChild(imge)
-    banner.appendChild(div)
-}
-mostrarBanner()
+// function mostrarBanner(){
+//     const banner = document.getElementById('bannerInicial')
+//     const div = document.createElement('div')
+//     div.classList.add('bannerInicial')
+//     const imge = document.createElement('img')
+//     imge.classList.add("ajusteOTamanhoDaImagemDoBanner")
+//     imge.src="https://raw.githubusercontent.com/fabricioalvess/E-commerce-javascript/master/img/banner1.png"
+//     div.appendChild(imge)
+//     banner.appendChild(div)
+// }
+// mostrarBanner()
 //----------------------------------------------------------------------
 
 const pesquisa = document.getElementById('pesquisa')
