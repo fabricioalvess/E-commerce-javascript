@@ -73,6 +73,10 @@
     text-decoration: none;
     font-size: 16px;
 }
+a{
+    color:white
+}
+
 .menu-responsivo{
     display: none;
 }
@@ -111,11 +115,10 @@ footer{
     justify-content: center;
     width: 100%;
     align-items: center;
-    height: 400px;
+    height: 50px;
     color: rgb(255, 255, 255);
    
-    background-color:#070A52;
-    box-shadow:  0 0 100px 10px #080524;
+    background-color:#3c3d47;
     font-weight: 300;
 }
 @media (max-width: 862px)

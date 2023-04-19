@@ -54,5 +54,7 @@ function pegarApi(){
     
     criandoProdutos(produtos)
     filtrarProdutos(produtos)
+    regrasDeComparacao(produtos)
+    mostrarTextoDigitado(produtos)
 }
 pegarApi()
