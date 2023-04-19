@@ -11,7 +11,3 @@ fecharMenu.addEventListener('click', event =>{
 
 })
 
-//fim menu
-
-//inicio box do produto
-

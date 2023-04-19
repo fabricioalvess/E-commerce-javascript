@@ -6,7 +6,8 @@
     align-items:center;
     flex-direction: column;
     margin-top:25px;
-    padding: 0;
+    padding: 10px;
+    border-bottom:1px solid rgb(239, 239, 239)
 }
 .grupoDeImagenslmpm{
     width: 100%;
@@ -17,7 +18,7 @@
 
 }
 .boxProdutolmpm{
-    width: 30%;
+    width: 20%;
 }
 .boxProdutolmpm img{
     width: 100%;

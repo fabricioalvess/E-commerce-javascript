@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="styles/bannerInicial.css">
     <link rel="stylesheet" href="styles/carrosel.css">
     <link rel="stylesheet" href="styles/lmpm.css">
-
-    <title>Document</title>
+    <title>E-commerce em Javascript</title>
 </head>
 <body>
 
@@ -19,79 +18,60 @@
         <div class="nav">
             <span class="logo">Fabricio<span style="color: #D21312">Cintra</span></span>
             <div class="imputPesquisa">
-                <input type="text" placeholder="Pesquisa">
+                <input type="text" placeholder="Pesquisa" id="pesquisa">
                 <i class="fa-solid fa-magnifying-glass fa-lg" ></i>
             </div>
             <ul class="ativa menu">
-               
                 <li><a href="#">Carrinho</a></li>
             </ul>
-            
-        
                 <li class="botao-menu-responsivo">
-                
                     <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;" id="abrir-menu"></i>
-                </li>
-                
+                </li> 
             </div>
-            <div class="categoriaProduto">
-               
-                    <button class="botaoCategoria" id="categoria_adulto" value="adulto">Adulto</button>
-                    <button class="botaoCategoria" id="categoria_infantil" value="infantil">Infantil</button>
-                    <button class="botaoCategoria" id="categoria_masculino" value="masculino">Masculino</button>
-                    <button class="botaoCategoria"  id="categoria_feminino" value="feminino">Feminino</button>
-                
-            </div>
-
-    
-
-    <div class="menu-responsivo " >
-        <ul>
-            <li><a href="#">home</a></li>
-            <li><a href="#">serviços</a></li>
-            <li><a href="#">contato</a></li>
-            <li><a href="#" id="fechar-menu" > X </a></li>
-
-        </ul>
-    </div>
-
-
-
-
-    <div class="bannerInicial"></div>
-
-
-    <div class="carrosellmpm" >
-       <div class="grupoDeImagenslmpm">
-            <div class="boxProdutolmpm">
-                <img src="img/l3p2.png" alt="">
-            </div>
-            <div class="boxProdutolmpm">
-                <img src="img/l4p3.png" alt="">    
-            </div>
-       </div>
-    </div>
-
-
-    <div class="carrosel" id="carrosel">
-
-        <h2 class="tituloSessao">Produtos em Destaques</h2>
-
-       <div class="grupoDeImagensCarrosel" id="grupoDeImagensCarrosel">
-           
             
-       </div>
+            <div class="categoriaProduto">
+                <button class="botaoCategoria" id="categoria_adulto" value="adulto">Adulto</button>
+                <button class="botaoCategoria" id="categoria_infantil" value="infantil">Infantil</button>
+                <button class="botaoCategoria" id="categoria_masculino" value="masculino">Masculino</button>
+                <button class="botaoCategoria"  id="categoria_feminino" value="feminino">Feminino</button>
+            </div>
+            <div class="menu-responsivo " >
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">serviços</a></li>
+                    <li><a href="#">contato</a></li>
+                    <li><a href="#" id="fechar-menu" > X </a></li>
+                </ul>
+            </div>
+
+            <div class="bannerInicial" id="bannerInicial"></div>
+            
+            <div class="carrosellmpm" >
+                <div class="grupoDeImagenslmpm">
+                    <div class="boxProdutolmpm">
+                        <img src="img/l3p2.png" alt="">
+                    </div>
+                    <div class="boxProdutolmpm">
+                        <img src="img/l4p3.png" alt="">    
+                    </div>
+                </div>
+            </div>
+
+            <div class="carrosel" id="carrosel">
+                <h2 class="tituloSessao">Produtos em Destaques</h2>
+                <div class="grupoDeImagensCarrosel" id="grupoDeImagensCarrosel"></div>
+            </div>
+
+           
+            <footer>
+                copy - <span id="data">2023</span>
+            </footer>
     </div>
 
 
-
-
-    
-
-    </div>
-    <script src="script/mostrarProdutosNaTela.js"></script>
-    <script src="script/menu.js"></script>
-    <script src="script/filtroProd.js"></script>
-    <script src="script/arraydeprodutos.js"></script>
+<script src="script/mostrarProdutosNaTela.js"></script>
+<script src="script/menu.js"></script>
+<script src="script/filtroProd.js"></script>
+<script src="script/arraydeprodutos.js"></script>
 </body>
 </html>
