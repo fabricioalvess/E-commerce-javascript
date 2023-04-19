@@ -22,7 +22,7 @@ function mostrarBanner(){
     div.classList.add('bannerInicial')
     const imge = document.createElement('img')
     imge.classList.add("ajusteOTamanhoDaImagemDoBanner")
-    imge.src="../img/banner1.png"
+    imge.src="https://raw.githubusercontent.com/fabricioalvess/E-commerce-javascript/master/img/banner1.png"
     div.appendChild(imge)
     banner.appendChild(div)
 }
