@@ -5,11 +5,11 @@ var sobre = [
     },
     {
     "titulo": "banner2",
-    "imagem":"https://raw.githubusercontent.com/fabricioalvess/E-commerce-javascript/master/img/banner1.png"
+    "imagem":"https://raw.githubusercontent.com/fabricioalvess/E-commerce-javascript/master/img/banner2.png"
     },
     {
     "titulo":"banner3",
-    "imagem": "https://raw.githubusercontent.com/fabricioalvess/E-commerce-javascript/master/img/banner1.png"
+    "imagem": "https://raw.githubusercontent.com/fabricioalvess/E-commerce-javascript/master/img/banner3.png"
     }
 ]
 
