@@ -12,7 +12,7 @@ const produtos = [
         "preco": "99,90",
         "categoria":"adulto",
         "frete": "gratis",
-        "img": "https://d2e5mvjndnxyoo.cloudfront.net/Custom/Content/Products/18/57/1857138_camiseta-m-c-wild-fills-juvenil-q471t0522_z1_637985346380202671.jpg"
+        "img": "https://github.com/fabricioalvess/E-commerce-javascript/blob/master/img/Design%20sem%20nome.png?raw=true"
     },
     {
         "descricao" : "Camiseta Oakley Basica 2",

@@ -28,9 +28,6 @@ function criandoProdutos(produto){
     })  
 }
 
-
-
-
 const pesquisa = document.getElementById('pesquisa')
 
 pesquisa.addEventListener('input',manipulaFiltragem)
@@ -39,32 +36,6 @@ function manipulaFiltragem(){
 
    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function mostrarElementos(){    
     bannerTopo.style.display="flex"
     lmpm.forEach(el => el.style.display="initial")
@@ -76,7 +47,5 @@ function esconderElementos(x){
     lmpm.forEach(el => el.style.display="none")
     containerDeProdutos.style.paddingTop="100px"
 }
-
-
 
 

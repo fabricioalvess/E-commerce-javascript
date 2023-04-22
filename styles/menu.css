@@ -103,7 +103,6 @@ i{
     top: 60px;
     animation-name: categoriaProduto;
     animation-duration: 2s;
-    z-index: 1;
     background-color: #fff;
 }
 @keyframes categoriaProduto{
@@ -148,9 +147,8 @@ footer{
     }
 
     .menu-responsivo ul{
-        box-shadow: inset 0 0 100px 10px #570d61;
         width: 90%;
-        background-color:#71087f;
+        background-color:#070A52;
         height: 90vh;
         position: absolute;
         top: 0;
@@ -161,11 +159,12 @@ footer{
         justify-content: first baseline;
         list-style: none;
         padding-top: 50px;
-        border-bottom-left-radius: 100px;
+        border: none;
     }
     .menu-responsivo ul li a{
         color: white;
         text-decoration: none;
+        font-weight: bold;
         
     }
     .menu-responsivo ul li{

@@ -1,21 +1,29 @@
 .bannerInicial{
-    min-width: 100%;
-    height: 60vh;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    
 	animation-name: main;
 	animation-duration: 1s;
     
 }
-.ajusteOTamanhoDaImagemDoBanner{
+#sobre_container{
     width: 100%;
-    height: auto;
-    overflow: hidden;
-    
+    display: flex;
+}
+#sobre_imagem{
+    width: 100%;
+    padding: 0;
+    display: flex;
+}
+#sobre_imagem img{
+    width: 100%;
+   
+}
+#conteudo_sobre{
+    width: 100%;
 }
 @keyframes main{
 	0% {opacity: 0;transform: translate(-10px, 0px);}
