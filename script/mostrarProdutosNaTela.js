@@ -44,9 +44,7 @@ function criandoProdutos(produto){
                 if(!t.includes(filtroPesquisa)){
                     produto.style.display="none"
                     esconderElementos()
-                    containerDeProdutos.style.paddingTop = "50px"
-                    containerDeProdutos.style.height = "90vh"
-                    containerDeProdutos.innerHTML = `<p><bold>Produto não encontrado</bold></p>`
+                    
                     
                 }else{
                     produto.style.display="flex"

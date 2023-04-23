@@ -20,10 +20,6 @@
     min-width: 25%;
     width: 25%;
     height: 100px;
-    
-    
-    
-
 }
 .nav ul li{
     list-style: none;
@@ -104,7 +100,6 @@ i{
     top: 60px;
     animation-duration: 2s;
     background-color: #fff;
-    z-index: 1;
 }
 @keyframes categoriaProduto{
 	0% {opacity: 0;transform: translate(-100px, 0px);}
@@ -180,13 +175,25 @@ footer{
         
     }
     .menu{
-        display: none;
+        display: initial;
     }
     .imputPesquisa{
         display: none;
     }
+    .nav{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
     .nav input{
-        display: none;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .menuResponsivo{
@@ -196,8 +203,8 @@ footer{
         z-index: 3;
     }
     .botao-menu-responsivo {
-        width: 50%;
-        height: 100px;
+        width: 40%;
+        height: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -213,11 +220,55 @@ footer{
     }
    
     .logo{
-        width: 50%;
+        padding-left: 25px;
+        width: 60%;
+        height: 50px;
         font-size: 1.5em;
-        padding-left: 10px;
+        display: flex;
     }
+   
     i{
         display: initial;
     }
+    #pesquisa{
+        width:100%;
+    }
+
+    .imputPesquisa{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        position: absolute;
+        outline: 0;
+        margin-left: 0;
+        top: 50px;
+        left: 150px;
+        
+    }
+    .imputPesquisa i{
+        display: flex;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        top: 0px;
+        right: 40px;
+        color: #070A52;
+    }
+    .carrinho{
+        display: none;
+    }
+    .categoriaProduto{
+        margin: 0;
+        display: flex;
+        width: 100%;
+        height: 30px;
+        animation-duration: 2s;
+        top:100px;
+        z-index: 1;
+    }
+
+    
 }

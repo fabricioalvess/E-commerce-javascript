@@ -5,9 +5,8 @@
     justify-content: center;
     align-items:center;
     flex-direction: column;
-    margin-top:25px;
+    margin-top:30px;
     padding: 10px;
-    border-bottom:1px solid rgb(239, 239, 239);
     animation-name: carrosellmpm;
 	animation-duration: 1s;
     
@@ -31,4 +30,19 @@
 .boxProdutolmpm img{
     width: 100%;
     padding: 0 20px;
+}
+@media (max-width: 862px){
+    .carrosellmpm{
+        width: 100%;
+        height: auto;
+        
+    }
+    .boxProdutolmpm img{
+        width: 100%;
+        padding: 0 ;
+    }
+    .boxProdutolmpm{
+        width: 60%;
+        margin: 10px;
+    }
 }
