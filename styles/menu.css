@@ -73,7 +73,8 @@
     
 }
 .fa-solid {
-    margin-left: 10px;
+    padding: 0;
+    margin: 0;
 }
 .nav ul li a{
     color: white;
@@ -147,10 +148,14 @@ footer{
         display: initial;
         
     }
+    .menu-responsivo{
+        z-index: 2;
+        
+    }
 
     .menu-responsivo ul{
         width: 90%;
-        background-color:#070A52;
+        background-color:#070952e7;
         height: 90vh;
         position: absolute;
         top: 0;
@@ -171,6 +176,7 @@ footer{
     }
     .menu-responsivo ul li{
         padding: 20px 0;
+       
         
     }
     .menu{
@@ -182,15 +188,12 @@ footer{
     .nav input{
         display: none;
     }
-    .botao-menu-responsivo{
-        display: initial;
-        width: 50%;
-        
-    }
+
     .menuResponsivo{
         width: 50%;
         height: 100px;
         display: flex;
+        z-index: 3;
     }
     .botao-menu-responsivo {
         width: 50%;

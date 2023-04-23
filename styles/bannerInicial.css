@@ -1,31 +1,31 @@
 .bannerInicial{
     width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 	animation-name: main;
 	animation-duration: 1s;
+    background-color: #fff;
     
-}
-#sobre_container{
-    width: 100%;
-    display: flex;
-}
-#sobre_imagem{
-    width: 100%;
-    padding: 0;
-    display: flex;
 }
 #sobre_imagem img{
     width: 100%;
    
 }
-#conteudo_sobre{
-    width: 100%;
-}
+
 @keyframes main{
 	0% {opacity: 0;transform: translate(-10px, 0px);}
 	100%{opacity: 1; transform: translate(0px, 0px);}
+}
+
+@media (max-width: 862px)
+{
+    .bannerInicial{
+        min-width: auto;
+        min-height: 200px;
+        
+    }
+    #sobre_imagem {
+        overflow: hidden;
+    }
+   #sobre_imagem img{
+    min-width: 862px;
+   }
 }

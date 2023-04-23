@@ -18,7 +18,7 @@ function criandoProdutos(produto){
         h2Filho2.classList.add('tituloProduto')
         h2Filho2.innerHTML=p.descricao
         const h3Filho3 = document.createElement('h3')
-        h3Filho3.innerHTML= p.preco
+        h3Filho3.innerHTML= "$" + p.preco
         divPai.appendChild(imgFilho1)
         divPai.appendChild(h2Filho2)
         divPai.appendChild(h3Filho3)
