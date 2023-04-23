@@ -53,6 +53,7 @@ const produtos = [
 function pegarApi(){
     
     criandoProdutos(produtos)
+    manipulaFiltragem(produtos)
   
 }
 pegarApi()
