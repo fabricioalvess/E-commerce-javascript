@@ -16,31 +16,24 @@
 <body>
 
     <div class="container">
-        <div class="nav">
-
-            <span class="logo">ONLYSHIRT</span>
-            
-          
-            <ul class="carrinho">
-                <li><a href="#">Carrinho</a></li>
-            </ul>
-                <li class="botao-menu-responsivo">
-                    <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;" id="abrir-menu"></i>
-                </li> 
-                <div class="imputPesquisa">
-                    <input type="text" placeholder="Pesquisa" id="pesquisa">
-                    <i class="fa-solid fa-magnifying-glass fa-lg" ></i>
+        <nav> 
+            <div class="menu">
+                <div class="logo">
+                    <a href="index.html">CAMISASONLINE</a>
                 </div>
-    
+                <div class="barra-pesquisa">
+                    <input type="input" placeholder="Pesquise o produto" id="pesquisa">
+                    <i class="fa-solid fa-magnifying-glass fa-lg icone-pesquisa" id="botao-pesquisa"></i>
+                </div>
+                <div class="carrinho">
+                    <a href="#">carrinho</a>
+                    <i class="fa-solid fa-bag-shopping" style="color: #ffffff;"></i>
+                </div>
+                <div class="botao-menu-responsivo">
+                    <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;" id="abrir-menu"></i>
+                </div> 
             </div>
-            
-            <div class="categoriaProduto">
-                <button class="botaoCategoria" id="categoria_adulto" value="adulto">Adulto</button>
-                <button class="botaoCategoria" id="categoria_infantil" value="infantil">Infantil</button>
-                <button class="botaoCategoria" id="categoria_masculino" value="masculino">Masculino</button>
-                <button class="botaoCategoria"  id="categoria_feminino" value="feminino">Feminino</button>
-            </div>
-            <div class="menu-responsivo " >
+            <div class="menu-responsivo" >
                 <ul>
                     <li><a href="#">home</a></li>
                     <li><a href="#">serviços</a></li>
@@ -48,25 +41,33 @@
                     <li><a href="#" id="fechar-menu" > X </a></li>
                 </ul>
             </div>
+            <div class="menu-categoria">
+                <button class="botaoCategoria" id="categoria_adulto" value="adulto">Adulto</button>
+                <button class="botaoCategoria" id="categoria_infantil" value="infantil">Infantil</button>
+                <button class="botaoCategoria" id="categoria_masculino" value="masculino">Masculino</button>
+                <button class="botaoCategoria"  id="categoria_feminino" value="feminino">Feminino</button>
+            </div>
+        </nav>
+
+
 
         <div class="bannerInicial" id="bannerInicial">
 
-<!------------------------------------------>
+        <!------------------------------------------>
              <div id="sobre_container " >
-               <h1 class="tituloh1">About</h1>
                 <div id="conteudo_sobre bannerInicial" >
-                    <div id="sobre_titulo"><h1>banner1</h1></div>
+                    <div id="sobre_titulo"><h1></h1></div>
                     <div id="sobre_imagem" class=""><img src="https://raw.githubusercontent.com/fabricioalvess/E-commerce-javascript/master/img/banner1.png" alt="" ></div> 
                     <div id="conjunto_seta_sobre">
-                        <div id="seta_sobre_anterior"><</div> 
-                    <div id="seta_sobre_frente">></div>
+                        <div id="seta_sobre_anterior"><i class="fa-solid fa-arrow-right fa-rotate-180 seta-anterior"></i></div> 
+                        <div id="seta_sobre_frente"><i class="fa-solid fa-arrow-right seta-frente"></i></div>
                 </div>
         
         
                 </div>
             </div> 
         </div>
-<!------------------------------------------>
+        <!------------------------------------------>
           
     
    

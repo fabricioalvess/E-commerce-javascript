@@ -3,13 +3,14 @@ const grupoDeImagensCarrosel = document.querySelector('#grupoDeImagensCarrosel')
 const lmpm = document.querySelectorAll('.boxProdutolmpm')
 const bannerTopo = document.querySelector('.bannerInicial')
 const containerDeProdutos = document.querySelector('.carrosel')
+const botaoPesquisa = document.querySelector('#botao-pesquisa')
+const pesquisa = document.getElementById('pesquisa')
+
 
 function criandoProdutos(produto){
 
     grupoDeImagensCarrosel.innerHTML=""
     produto.forEach((p, index) =>{
-
-        
         const divPai = document.createElement('div')
         divPai.classList.add('boxProdutoCarrosel')
         const imgFilho1 = document.createElement('img')
@@ -23,19 +24,17 @@ function criandoProdutos(produto){
         divPai.appendChild(h2Filho2)
         divPai.appendChild(h3Filho3)
         divPai.dataset.produto = 0
-        grupoDeImagensCarrosel.appendChild(divPai)
-       
-        
+        grupoDeImagensCarrosel.appendChild(divPai)  
     }) 
+
+    buscarPelaBarraDePesquisa()
     
+}
+    
+function buscarPelaBarraDePesquisa(){
     const dataProduto = document.querySelectorAll('[data-produto]')
-        
-    const pesquisa = document.getElementById('pesquisa')
-
     pesquisa.addEventListener('input',manipulaFiltragem)
-
     function manipulaFiltragem(){
-       
         if(pesquisa.value != ''){
             for(let produto of dataProduto){
                 let t = produto.querySelector('h2')
@@ -44,8 +43,6 @@ function criandoProdutos(produto){
                 if(!t.includes(filtroPesquisa)){
                     produto.style.display="none"
                     esconderElementos()
-                    
-                    
                 }else{
                     produto.style.display="flex"
                 }
@@ -53,15 +50,11 @@ function criandoProdutos(produto){
         }else{
             for(let produto of dataProduto){
                 produto.style.display="flex"
-                mostrarElementos()
-               
+                mostrarElementos() 
             }
         }
     }
-
 }
-
-
 
 function mostrarElementos(){    
     bannerTopo.style.display="flex"

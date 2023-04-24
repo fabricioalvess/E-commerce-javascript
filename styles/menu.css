@@ -1,111 +1,75 @@
 
-.nav{
-    display: flex;
-    justify-content: center;
+ nav{
     width: 100%;
-    align-items: center;
-    height: 60px;
-    color: rgb(255, 255, 255);
-    position: fixed;
-    top: 0;
-    background-color:#070A52;
-    font-weight: 300;
-    z-index: 1;
-    
-}
-.menu{
+ }
+ .menu{
+    width: 100%;
+    height: auto;
+    background-color: #6F1AB6;
     display: flex;
     align-items: center;
-    justify-content:flex-end;
-    min-width: 25%;
-    width: 25%;
-    height: 100px;
-}
-.nav ul li{
-    list-style: none;
-    padding-left: 40px;
-}
-.logo{
-    display: flex;
-    min-width: 25%;
-    width: 25%;
-    height: 100px;
-    justify-content: flex-start;
-    align-items: center;
-    font-weight: 800;
-    font-size: 130%;
-   
-}
-.imputPesquisa{
-    width: 25%;
-    min-width: 25%;
-    height: 100px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px 0;
+ }  
+ .logo{
+    width: 33%;
+    min-width: 300px;
+    font-size: 1.2em;
+    font-weight: 600;
     display: flex;
     justify-content: center;
-    align-items: center;
+ }
+ .logo a{
+    text-decoration: none;
+    color: white;
+ }
+ .barra-pesquisa{
+    position: relative;
+    width: 33%;
+    min-width: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+ }
+ .barra-pesquisa input{
+    width: 80%;
     outline: 0;
     border: 0 none;
-}
-.imputPesquisa i{
-    width: 30px;
-    height: 100px;
+    padding: 5px 50px 5px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+ }
+ .icone-pesquisa{
+    position: absolute;
+    top: 18px;
+    right: 60px;
+ }
+ .carrinho{
+    width: 33%;
+    min-width: 300px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    position: relative;
-    top: 0px;
-    right: 40px;
-    color: #070A52;
-}
-.nav input{
-    font-size: 1em;
-    width: 80%;
-    height: 40px;
-    border:0 none;
-    border-radius: 100px;
-    padding: 0 0 0 50px;
-    outline: 0;
-
-    
-}
-.fa-solid {
-    padding: 0;
-    margin: 0;
-}
-.nav ul li a{
-    color: white;
+ }
+ .carrinho a{
+    font-size: 18px;
     text-decoration: none;
-    font-size: 16px;
-}
-a{
-    color:white
-}
+    color: aliceblue;
+    padding-right: 5px;
+ }
 
-.menu-responsivo{
-    display: none;
-}
-.botao-menu-responsivo{
-    display: none;
-}
-i{
-    display: none;
-}
-.categoriaProduto{
+ .menu-categoria{
     display: flex;
     width: 100%;
     height: 30px;
     justify-content:space-around;
     align-items: center;
-    position: fixed;
-    top: 60px;
+   
     animation-duration: 2s;
     background-color: #fff;
 }
-@keyframes categoriaProduto{
-	0% {opacity: 0;transform: translate(-100px, 0px);}
-	100%{opacity: 1; transform: translate(0px, 0px);}
-}
-.categoriaProduto .botaoCategoria{
+.menu-categoria .botaoCategoria{
     font-size: 16px;
     width: 25%;
     height: 30px;
@@ -113,8 +77,6 @@ i{
     font-weight: 300;
     cursor: pointer;
     padding: 0;
-
-    z-index: 1;
 }
 .botaoCategoria:hover{
     width: 25%;
@@ -124,33 +86,27 @@ i{
     font-weight: normal;
     border-top: 1px solid rgb(104, 104, 104);
 }
-/*rodape*/
-footer{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-    height: 50px;
-    color: rgb(255, 255, 255);
-   
-    background-color:#3c3d47;
-    font-weight: 300;
+.botao-menu-responsivo{
+    display: none;
+}
+.menu-responsivo{
+    display: none;
 }
 @media (max-width: 862px)
 {
-    
     .ativa{
         display: initial;
         
     }
     .menu-responsivo{
-        z-index: 2;
+        width: 100%;
+        height: auto;
+        background-color:#070952e7;
         
     }
-
     .menu-responsivo ul{
         width: 90%;
-        background-color:#070952e7;
+        background-color: #6F1AB6;
         height: 90vh;
         position: absolute;
         top: 0;
@@ -163,52 +119,21 @@ footer{
         padding-top: 50px;
         border: none;
     }
+    .menu-responsivo ul li{
+        padding: 20px 0;
+    }
     .menu-responsivo ul li a{
         color: white;
         text-decoration: none;
-        font-weight: bold;
-        
-    }
-    .menu-responsivo ul li{
-        padding: 20px 0;
-       
-        
-    }
-    .menu{
-        display: initial;
-    }
-    .imputPesquisa{
-        display: none;
-    }
-    .nav{
-        width: 100%;
-        height: 100px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
-    .nav input{
-        width: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        font-weight: bold;  
     }
 
-    .menuResponsivo{
-        width: 50%;
-        height: 100px;
-        display: flex;
-        z-index: 3;
-    }
     .botao-menu-responsivo {
         width: 40%;
         height: 50px;
         display: flex;
         justify-content: center;
-        align-items: center;
-        
+        align-items: center; 
     }
     .botao-menu-responsivo i{
        width: 100%;
@@ -216,59 +141,8 @@ footer{
        display: flex;
        justify-content: center;
        align-items: center;
-        
     }
-   
-    .logo{
-        padding-left: 25px;
-        width: 60%;
-        height: 50px;
-        font-size: 1.5em;
-        display: flex;
+    .barra-pesquisa input{
+    padding: 5px 55px 5px 20px;
     }
-   
-    i{
-        display: initial;
-    }
-    #pesquisa{
-        width:100%;
-    }
-
-    .imputPesquisa{
-        width: 100%;
-        height: 50px;
-        display: flex;
-        position: absolute;
-        outline: 0;
-        margin-left: 0;
-        top: 50px;
-        left: 150px;
-        
-    }
-    .imputPesquisa i{
-        display: flex;
-        width: 100%;
-        height: 100px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        position: relative;
-        top: 0px;
-        right: 40px;
-        color: #070A52;
-    }
-    .carrinho{
-        display: none;
-    }
-    .categoriaProduto{
-        margin: 0;
-        display: flex;
-        width: 100%;
-        height: 30px;
-        animation-duration: 2s;
-        top:100px;
-        z-index: 1;
-    }
-
-    
 }
