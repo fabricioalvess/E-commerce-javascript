@@ -28,9 +28,11 @@
         font-weight: bold;
         color: #cecece;
         text-align: center;
+        z-index: 0;
     }
     #seta_sobre_frente{
         width:5%;
+        font-weight: bold;
         color: #cecece;
         text-align: center;
     }
@@ -55,7 +57,4 @@
     animation-name: banners;
 	animation-duration: 1s;
    
-}
-@media (max-width: 862px){
-    
 }

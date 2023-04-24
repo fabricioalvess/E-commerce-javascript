@@ -1,6 +1,4 @@
-.container{
-    background-color: #f2f2f2;
-}
+
 .bannerInicial{
     width: 100%;
     height: auto;
@@ -21,14 +19,9 @@
 @media (max-width: 862px)
 {
     .bannerInicial{
-        min-width: auto;
-        min-height: 200px;
-        
+       
     }
-    #sobre_imagem {
-        overflow: hidden;
-    }
+
    #sobre_imagem img{
-    min-width: 862px;
    }
 }
