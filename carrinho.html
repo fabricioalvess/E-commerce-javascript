@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/paginainicial/menu.css">
+    <link rel="stylesheet" href="styles/paginainicial/normalizacao.css">
+    <link rel="stylesheet" href="styles/carrinho/carrinho.css">
+    
+    <title>E-commerce em Javascript</title>
+</head>
+<body>
+
+    <div class="container">
+        <nav> 
+            <div class="menu">
+                <div class="logo">
+                    <a href="index.html">CAMISASONLINE</a>
+                </div>
+                <div class="barra-pesquisa">
+                    <input type="input" placeholder="Pesquise o produto" id="pesquisa">
+                    <i class="fa-solid fa-magnifying-glass fa-lg icone-pesquisa" id="botao-pesquisa"></i>
+                </div>
+                <div class="carrinho">
+                    <a href="#">carrinho</a>
+                    <i class="fa-solid fa-bag-shopping" style="color: #ffffff;"></i>
+                </div>
+                <div class="botao-menu-responsivo">
+                    <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;" id="abrir-menu"></i>
+                </div> 
+            </div>
+            <div class="menu-responsivo" >
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">serviços</a></li>
+                    <li><a href="#">contato</a></li>
+                    <li><a href="#">carrinho</a> <i class="fa-solid fa-bag-shopping" style="color: #ffffff;"></i></li>
+                    <li><a href="#" id="fechar-menu" > X </a></li>
+                </ul>
+            </div>
+           
+        </nav>
+
+       
+        
+        
+       
+        <footer>
+          
+        </footer>
+    </div>
+
+
+    <script src="script/mostrarProdutosNaTela.js"></script>
+    <script src="script/menu.js"></script>
+    <script src="script/filtroProd.js"></script>
+    <script src="script/arraydeprodutos.js"></script>
+    <script src="script/carrinho.js"></script>
+</body>
+</html>

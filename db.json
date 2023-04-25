@@ -3,7 +3,7 @@
             {
                 "descricao" : "Camiseta Puma Basica 1",
                 "preco": "99,90",
-                "categoria":"masculino",
+                "categoria":"masculina",
                 "frete": "gratis",
                 "img": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/848742/01/mod01/fnd/BRA/w/1000/h/1000/fmt/png"
             },
@@ -17,7 +17,7 @@
             {
                 "descricao" : "Camiseta Oakley Basica 2",
                 "preco": "99,90",
-                "categoria":"masculino",
+                "categoria":"masculina",
                 "frete": "gratis",
                 "img": "https://static.netshoes.com.br/produtos/camiseta-oakley-o-bark-masculina/14/D63-4582-014/D63-4582-014_zoom1.jpg?ts=1583425261"
             },
