@@ -1,6 +1,7 @@
 botaoCarrinho.addEventListener('click', ()=>{
     mostrarItenNoCarrinho()
     esconderElementosNaTela()
+    produtoNoCarrinho()
 })
 
 
@@ -51,7 +52,7 @@ function sairDoCarrinho(){
            })
     })
 }
-
+sairDoCarrinho()
 
 function mostrarItenNoCarrinho(){
     itemNoCarrinho.style.display="flex"
@@ -61,8 +62,13 @@ function esconderElementosNaTela(){
     containerDeProdutos.style.display="none"
     bannerTopo.style.display="none" 
 }
+function esconderCarrinhoDeCompras(){
+    const esconderCarrinhoDeCompras = document.querySelector('.carrinho-de-compra')
+    esconderCarrinhoDeCompras.style.display="none"
+}
 
-sairDoCarrinho()
+
+
 
 
 

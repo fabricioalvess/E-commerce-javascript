@@ -11,7 +11,6 @@ const btnCat = document.querySelectorAll('.botaoCategoria')
 
 
 
-
 function criandoProdutos(produto){
     grupoDeImagensCarrosel.innerHTML=""
     produto.forEach((p, index) =>{
@@ -35,6 +34,8 @@ function criandoProdutos(produto){
         grupoDeImagensCarrosel.appendChild(divPai)  
     }) 
 
+    
+
     const dataProduto = document.querySelectorAll('[data-produto]')
     dataProduto.forEach(item =>{
         item.addEventListener('click' , el => {
@@ -52,9 +53,11 @@ function criandoProdutos(produto){
                 "img": img.src
             }
             itemNoCarrinho.innerHTML=""
+           
             const existe = listaNoCarrinho.find(elemento => elemento.descricao === descricao)
             if(existe){
               alert('Item adicionado no carrinho!')
+              
             }else{
                 listaNoCarrinho.push(novoItem)
             }        
@@ -62,6 +65,7 @@ function criandoProdutos(produto){
         })   
     })
     buscarPelaBarraDePesquisa() 
+    
 }
 
 function buscarPelaBarraDePesquisa(){

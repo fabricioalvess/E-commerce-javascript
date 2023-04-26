@@ -1,20 +1,65 @@
-.carrinho-de-compra{
-    width: 80%;
-    min-height: 100vh;
+.grupo-de-elementos{
+    width: 100%;
+    min-height: 400px;
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    
+}
+.main-compra{
+    width: 100%;
+    min-height: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: center;
+    margin-top: 100px;
+    
+}
+.pagamento-total{
+   
+    background-color: #fff;
+    width: 40%;
+    min-height: auto;
+    max-height: auto;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    
+}
+.container-pagamento{
+    width: 80%;
+    height: 500px;
+    border: 1px solid rgba(184, 184, 184, 0.833);
+    border-radius: 5px;
+}
+.carrinho-de-compra{
+   
+    width: 40%;
+    min-height: 400px;
+    min-height: auto;
+    display: flex;
+    align-items:flex-end;
+    justify-content: flex-end;
     flex-direction: column;
-    padding-top: 100px;
+    
+}
+.grupo-de-elementos h2{
+    width: 100%;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 20px 0 20px 200px;
 }
 
 
 
 .produto-no-carrinho{
     position: relative;
-    margin: 10px;
-    width: 35%;
-    height: 200px;
+    margin:0 10px;
+    width: 80%;
+    height: 280px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -22,6 +67,8 @@
     justify-content:space-around;
     border-radius: 10px;
     border: 1px solid rgba(67, 66, 66, 0.378);
+    box-shadow: 2px 1px 1px rgb(221, 220, 220);
+    background-color: #fff;
 }
 .imagem{
     width: 30%;
@@ -32,14 +79,14 @@
     justify-content: center;
 }
 .imagem img{
-    width:60%;
+    width:80%;
 }
 .descricao-do-produto{
     width:auto;
 }
 .descricao-do-produto h3{
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 300;
 }
 .cor{
     width: auto;
@@ -61,11 +108,11 @@
     line-height: 10px;
 }
 .quantidade{
-    width: auto;
+    width: 100%;
 }
 
 .quantidade input{
-    width: 30%;
+    width: 100%;
     border: none;
     appearance:textfield;
     text-align: center;
