@@ -1,18 +1,18 @@
 const grupoDeElementos = document.querySelectorAll('.boxProdutoCarrosel')
 const grupoDeImagensCarrosel = document.querySelector('#grupoDeImagensCarrosel')
-const lmpm = document.querySelectorAll('.boxProdutolmpm')
 const bannerTopo = document.querySelector('.bannerInicial')
 const containerDeProdutos = document.querySelector('.carrosel')
 const botaoPesquisa = document.querySelector('#botao-pesquisa')
 const pesquisa = document.getElementById('pesquisa')
 const itemNoCarrinho = document.querySelector('#item-no-carrinho')
 const listaNoCarrinho =  []
+const botaoCarrinho = document.querySelector('#botao-carrinho')
+const btnCat = document.querySelectorAll('.botaoCategoria')
 
 
 
 
 function criandoProdutos(produto){
-
     grupoDeImagensCarrosel.innerHTML=""
     produto.forEach((p, index) =>{
         const divPai = document.createElement('div')
@@ -36,12 +36,11 @@ function criandoProdutos(produto){
     }) 
 
     const dataProduto = document.querySelectorAll('[data-produto]')
-    dataProduto.forEach(x =>{
-        x.addEventListener('click' , el => {
+    dataProduto.forEach(item =>{
+        item.addEventListener('click' , el => {
             const img = el.target.parentElement.children[0]
             const descricao = el.target.parentElement.children[1].textContent
             const preco = el.target.parentElement.children[2].textContent
-
             const novoItem = {
                 "descricao" : descricao,
                 "preco": preco,
@@ -53,29 +52,17 @@ function criandoProdutos(produto){
                 "img": img.src
             }
             itemNoCarrinho.innerHTML=""
-
             const existe = listaNoCarrinho.find(elemento => elemento.descricao === descricao)
             if(existe){
               alert('Item adicionado no carrinho!')
             }else{
-                
                 listaNoCarrinho.push(novoItem)
-            }
-            
-         
+            }        
             produtoNoCarrinho(listaNoCarrinho)
-           
         })   
     })
-
-    buscarPelaBarraDePesquisa()  
-   
-
+    buscarPelaBarraDePesquisa() 
 }
-
-
-
-
 
 function buscarPelaBarraDePesquisa(){
     pesquisa.addEventListener('input',()=>{
@@ -84,7 +71,6 @@ function buscarPelaBarraDePesquisa(){
 }
 
 function manipulaFiltragem(){
-
     setTimeout(
         ()=>{
             var dataProduto = document.querySelectorAll('[data-produto]')
@@ -106,18 +92,16 @@ function manipulaFiltragem(){
                     mostrarElementos() 
                 }
             }
-    },500)  
+        },500)  
 }
 
 function mostrarElementos(){    
     bannerTopo.style.display="flex"
-    lmpm.forEach(el => el.style.display="initial")
     containerDeProdutos.style.padding="0"
 }
 
 function esconderElementos(){
     bannerTopo.style.display="none"
-    lmpm.forEach(el => el.style.display="none")
     containerDeProdutos.style.paddingTop="100px"
 }
 
