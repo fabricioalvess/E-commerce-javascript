@@ -55,7 +55,10 @@ function produtoNoCarrinho(){
     
 function excluirDoCarrinho(x){
     let elemento = x.target.parentNode.parentElement
+    listaNoCarrinho.splice(elemento,1)
     elemento.remove()
+    atualizaLocalStorage()
+    
 }
     
 function sairDoCarrinho(){

@@ -84,6 +84,7 @@ function adicionandoProdutoEmLista(dataProduto){
         })   
     })
     buscarPelaBarraDePesquisa() 
+    
 }
 
 

@@ -70,10 +70,33 @@
 	animation-duration: 1s;
    
 }
+
+.titulo-responsivo{
+    display: none;
+   
+}
 @media (max-width:800px) {
+   
     .bannerInicial{
-        padding-top: 170px;
-        
-        
+        height: 690px;
+       
+        background: linear-gradient(90deg, #821dd5 0%, #691ba9 35%, #2a0a47 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+    #sobre_imagem img{
+       display: none;
+
+       
+    }
+    .titulo-responsivo{
+        display: inline;
+        color: aliceblue;
+    }
+    #conjunto_seta_sobre{
+        display: none;
+     
+    }
+    
 }
