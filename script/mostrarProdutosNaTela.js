@@ -5,10 +5,22 @@ const containerDeProdutos = document.querySelector('.carrosel')
 const botaoPesquisa = document.querySelector('#botao-pesquisa')
 const pesquisa = document.getElementById('pesquisa')
 const itemNoCarrinho = document.querySelector('#item-no-carrinho')
-const listaNoCarrinho =  []
 const botaoCarrinho = document.querySelector('#botao-carrinho')
 const btnCat = document.querySelectorAll('.botaoCategoria')
 
+var listaNoCarrinho =  []
+const localStorageRecuperada = localStorage.getItem('listaNoCarrinho')
+
+function atualizaLocalStorage(){
+    localStorage.setItem('listaNoCarrinho',JSON.stringify(listaNoCarrinho))
+}
+
+if(localStorageRecuperada){
+    listaNoCarrinho = JSON.parse((localStorageRecuperada))
+    criandoProdutos()   
+}else{
+    listaNoCarrinho=[]
+}
 
 
 function criandoProdutos(produto){
@@ -33,10 +45,15 @@ function criandoProdutos(produto){
         divPai.dataset.produto = index
         grupoDeImagensCarrosel.appendChild(divPai)  
     }) 
-
-    
-
+   
     const dataProduto = document.querySelectorAll('[data-produto]')
+    
+    adicionandoProdutoEmLista(dataProduto)
+   
+   
+}
+
+function adicionandoProdutoEmLista(dataProduto){
     dataProduto.forEach(item =>{
         item.addEventListener('click' , el => {
             const img = el.target.parentElement.children[0]
@@ -59,20 +76,23 @@ function criandoProdutos(produto){
               alert('Item adicionado no carrinho!')
               
             }else{
-                listaNoCarrinho.push(novoItem)
-            }        
+                listaNoCarrinho.push(novoItem)           
+               
+            }   
             produtoNoCarrinho(listaNoCarrinho)
+            atualizaLocalStorage()
         })   
     })
     buscarPelaBarraDePesquisa() 
-    
 }
+
 
 function buscarPelaBarraDePesquisa(){
     pesquisa.addEventListener('input',()=>{
         botaoPesquisa.addEventListener('click', manipulaFiltragem )        
     })
 }
+
 
 function manipulaFiltragem(){
     setTimeout(
@@ -85,7 +105,7 @@ function manipulaFiltragem(){
                     let filtroPesquisa = pesquisa.value.toLowerCase()
                     if(!t.includes(filtroPesquisa)){
                         produto.style.display="none"
-                        esconderElementos()
+                        noneBanners()
                     }else{
                         produto.style.display="flex"
                     }
@@ -93,19 +113,39 @@ function manipulaFiltragem(){
             }else{
                 for(let produto of dataProduto){
                     produto.style.display="flex"
-                    mostrarElementos() 
+                    initialProdutos()
                 }
             }
-        },500)  
+    },500)     
 }
 
-function mostrarElementos(){    
-    bannerTopo.style.display="flex"
-    containerDeProdutos.style.padding="0"
-}
-
-function esconderElementos(){
+function noneBanners(){
     bannerTopo.style.display="none"
-    containerDeProdutos.style.paddingTop="100px"
+    
 }
+function noneProdutos(){
+    containerDeProdutos.style.display="none"
+    
+}
+function noneCarrinho(){
+    carrinhoDeCompra.style.display="none"
+    
+}
+function initialCarrinho(){
+    carrinhoDeCompra.style.display="flex"
+    
+}
+function initialProdutos(){
+    containerDeProdutos.style.display="flex"
+    containerDeProdutos.style.padding="0"
+    
+}
+
+function initialBanners(){
+    bannerTopo.style.display="flex"
+    
+}
+
+
+
 

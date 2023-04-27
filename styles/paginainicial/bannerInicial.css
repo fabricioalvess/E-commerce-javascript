@@ -1,5 +1,6 @@
 
 .bannerInicial{
+    padding-top: 90px;
     width: 100%;
     height: auto;
 	animation-name: main;
@@ -61,12 +62,18 @@
     
 }
 #sobre_imagem{
-    margin-top: 40px;
     width: 100%;
-    height: 64vh;
+    height: auto;
     display: flex;
     justify-content: center;
     animation-name: banners;
 	animation-duration: 1s;
    
+}
+@media (max-width:800px) {
+    .bannerInicial{
+        padding-top: 170px;
+        
+        
+    }
 }

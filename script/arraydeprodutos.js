@@ -80,11 +80,10 @@ const produtos = [
 ]
 
 
-
 function pegarApi(){
     
     criandoProdutos(produtos)
     manipulaFiltragem(produtos)
-    produtoNoCarrinho(produtos)
+    
 }
 pegarApi()
