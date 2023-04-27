@@ -1,4 +1,7 @@
 const carrinhoDeCompra =document.querySelector('.grupo-de-elementos')
+const x = document.querySelector('.carrinho-de-compra')
+
+
 
 botaoCarrinho.addEventListener('click', ()=>{
     bannerTopo.style.display="none"
@@ -43,11 +46,17 @@ function produtoNoCarrinho(){
                 </div>
             </div>
             `
-       
+           
         })
+        x.parentElement.children[0].childNodes[1].childNodes[1]
+        x.addEventListener('click', excluirDoCarrinho)
+   
     }
     
-
+function excluirDoCarrinho(x){
+    let elemento = x.target.parentNode.parentElement
+    elemento.remove()
+}
     
 function sairDoCarrinho(){
     btnCat.forEach(btn =>{

@@ -9,6 +9,7 @@
  .menu{
     width: 100%;
     height: auto;
+    background: linear-gradient(90deg, #821dd5 0%, #400f68 35%, #1f0735 100%);
     background-color: #6F1AB6;
     display: flex;
     align-items: center;
@@ -73,6 +74,8 @@
     animation-duration: 2s;
     background-color: #fff;
     z-index: 16;
+    
+    box-shadow: 5px 1px 5px  #d5d5d5;
 }
 .menu-categoria .botaoCategoria{
     font-size: 16px;
@@ -86,7 +89,7 @@
 .botaoCategoria:hover{
     width: 25%;
     height: 30px;
-    background-color:#070A52;
+    background-color:#1f0735;
     color: white;
     font-weight: normal;
     border-top: 1px solid rgb(104, 104, 104);
