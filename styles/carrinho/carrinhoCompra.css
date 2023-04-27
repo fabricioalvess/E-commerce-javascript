@@ -47,7 +47,17 @@
     box-sizing: border-box;
     
 }
-
+.btnCarrinho{
+    width: 100%;
+    padding: 10px 0px;
+    background: linear-gradient(90deg, #d3c60d 0%, #d48611 35%, #d81f12 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
 
 
 

@@ -11,4 +11,5 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background: linear-gradient(90deg, #f9f6f9 0%, #f8edf8 35%, #f7e3f7 100%);
 }

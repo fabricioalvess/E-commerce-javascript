@@ -36,7 +36,8 @@ function criandoProdutos(produto){
         const h3Filho3 = document.createElement('h3')
         h3Filho3.innerHTML= "$" + p.preco
         const comprar = document.createElement('span')
-        comprar.innerHTML="COMPRAR"
+        comprar.innerHTML="carrinho"
+        comprar.classList.add('btnCarrinho')
         comprar.dataset.btncomprar=index
         divPai.appendChild(imgFilho1)
         divPai.appendChild(h2Filho2)
