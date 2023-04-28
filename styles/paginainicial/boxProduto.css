@@ -3,15 +3,16 @@
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items:center;
     flex-direction: column;
-    padding: 0;
-    margin: 80px 0;
     animation-name: main;
-	animation-duration: 2s;
+	animation-duration: 1s;
     flex-wrap: wrap;
-    background-color: #fff;
+}
+.tituloSessao{
+    padding: 0;
+    margin: 0;
 }
 
 .grupoDeImagensCarrosel{
@@ -24,7 +25,7 @@
     align-items:center;
     animation-name: carroseldosprodutos;
 	animation-duration: 1s;
-    background-color: #902c2c;
+    
 }
 @keyframes carroseldosprodutos{
 	0% {opacity: 0;transform: translate(-30px, 0px);}
@@ -40,10 +41,11 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    font-weight: 500;
+    color: rgb(59, 59, 59);
 }
 .boxProdutoCarrosel{
     background-color: rgb(251, 251, 251);
-    box-shadow: 1px 2px 2px rgb(148, 148, 148);
     flex: 1 0 300px ;
     height:auto;
     min-width: 400px;
@@ -53,26 +55,24 @@
     flex-wrap: wrap;
     display: flex;
     padding: 10px;
-    border: 1px solid rgba(159, 159, 159, 0.188);
-   
+
 }
 
 .boxProdutoCarrosel img{
-    width:90%;
+    width:80%;
     padding: 0;
-   
+    transform: translatey(-5px);
+     
 }
 
 .tituloProduto{
     font-size: 18px;
+    font-weight:100;
     padding: 0;
-    font-weight: 300;
+    font-weight: normal;
+    color: rgb(136, 136, 136);
 }
-.precoProduto{
-    font-weight: 700;
-    font-size: 24px;
-    padding: 0;
-}
+
 .tituloSessao{
     width: 100%;
     font-size: 1.2rem;

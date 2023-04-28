@@ -37,26 +37,32 @@
  
 }
     #seta_sobre_anterior{
-        width: 5%;
+        width: 10%;
         font-weight: bold;
         color: #cecece;
         text-align: center;
         z-index: 0;
+        font-size: 10px;
+        padding: 10px;
     }
     #seta_sobre_frente{
         width:5%;
         font-weight: bold;
         color: #cecece;
         text-align: center;
-    }
-    .seta-frente{
         font-size: 10px;
         padding: 10px;
     }
-    .seta-anterior{
-        font-size: 10px;
-        padding: 10px;
+    #seta_sobre_anterior:hover{
+        transform: translatey(-5px);
+        transition: all .5s ease;
     }
+    #seta_sobre_frente:hover{
+        transform: translatey(-5px);
+        transition: all .5s ease;
+    }
+  
+  
 #sobre_titulo{
     display: none;
     

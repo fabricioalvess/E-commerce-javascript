@@ -50,6 +50,7 @@
 .btnCarrinho{
     width: 100%;
     padding: 10px 0px;
+    margin-top: 20px;
     background:white;
     border-radius: 2px;
     box-shadow: 1px 2px 2px rgb(231, 228, 228);
@@ -60,9 +61,11 @@
     font-size: 16px;
     cursor: pointer;
     font-weight: 300;
+    transform: translatey(-5px);
+        transition: all .5s ease;
 }
 .btnCarrinho:hover{
-    background: linear-gradient(90deg, #f5c78a 0%, #FFBD69 35%, #fca83a 100%);
+    background: linear-gradient(90deg, #323960 0%, #252d5b 35%, #1b255f 100%);
     color: white;
     font-weight: 300;
 }

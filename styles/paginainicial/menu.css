@@ -4,7 +4,7 @@
     position: fixed;
     top: 0;
     z-index: 20;
-
+    height: auto;
  }
  .menu{
     width: 100%;
@@ -99,25 +99,76 @@
 }
 @media (max-width: 862px)
 {
+  
+
     /*menu*/
     .menu{
-        height: 150px;
+        width: 100%;
+        height: 85px;
+        padding: 0;
+        display: flex;
+        position: relative;
     }
+    .logo{
+        width: 50%;
+        min-width: 0;
+        font-size: 25px;
+        padding: 0;
+        min-width:0;
+        position: absolute;
+        top: 5px;left: 5px;
+        font-size: 20px;
+     }
+     .barra-pesquisa{
+        width: 100%;
+        padding: 0;
+        min-width: 0px;
+        position: absolute;
+        top: 40px;
+        background-color: #fff;
+     }
+     .barra-pesquisa input{
+        padding: 5px 55px 5px 20px;
+        width: 90%;
+    }
+     .botao-menu-responsivo {
+        width: 10%;
+        min-width: 0;
+        height: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center; 
+        padding: 0;
+        position: absolute;
+        top: 0px;
+        right: 5px;
+       
+    }
+
+
+
     .ativa{
         display: initial;
         
     }
+
+     
+     .icone-pesquisa{
+       
+        top: 16px;
+        right: 60px;
+     }
+    
     .menu-responsivo{
         width: 100%;
         height: auto;
-        background-color:#0b175e;
         z-index: 11;
         position: fixed ;
         
     }
     .menu-responsivo ul{
         width: 98%;
-        height: 100vh;
+        height: 90vh;
         position: absolute;
         top: 0px;
         right: 0;
@@ -140,40 +191,23 @@
         font-weight: bold;  
     }
 
-    .botao-menu-responsivo {
-        width: 40%;
-        min-width: 0;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-    }
+   
     .botao-menu-responsivo i{
        width: 100%;
-       height: 100px;
+       height: 0px;
        display: flex;
        justify-content: center;
        align-items: center;
     }
-    .barra-pesquisa input{
-        padding: 5px 55px 5px 20px;
-    }
+   
     /*carrinho*/
     .carrinho{
         display: none;
      }
      /*barra pesquisa*/
-     .barra-pesquisa{
-        position: absolute;
-        width: 100%;
-        top: 100px;
-     }
+    
      /*logo*/
-     .logo{
-        width: 60%;
-        min-width: 0;
-        font-size: 25px;
-     }
+    
 }
 
 /*footer*/
