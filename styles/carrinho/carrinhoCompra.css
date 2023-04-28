@@ -169,3 +169,34 @@
     top: 10px;
     right: 10px;
 }
+@media(max-width:800px){
+    .main-compra{
+   
+        flex-direction: column;
+       
+        
+    }
+    .pagamento-total{
+   
+        background-color: #fff;
+        width: 100%;
+        min-height: auto;
+        max-height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .carrinho-de-compra{
+   
+        width: 100%;
+        min-height: 400px;
+        min-height: auto;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        flex-direction: column;
+        box-sizing: border-box;
+        
+    }
+}

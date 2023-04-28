@@ -3,14 +3,15 @@ const x = document.querySelector('.carrinho-de-compra')
 
 
 
-botaoCarrinho.addEventListener('click', ()=>{
+botaoCarrinho.addEventListener('click',mostrarCarrinho)
+function mostrarCarrinho(x){
     bannerTopo.style.display="none"
     containerDeProdutos.style.display="none"
     
     initialCarrinho()
     produtoNoCarrinho()
     
-})
+}
 
 function produtoNoCarrinho(){
     itemNoCarrinho.innerHTML=""
@@ -50,6 +51,7 @@ function produtoNoCarrinho(){
         })
         x.parentElement.children[0].childNodes[1].childNodes[1]
         x.addEventListener('click', excluirDoCarrinho)
+        x.addEventListener('click', produtoNoCarrinho)
    
     }
     
@@ -77,4 +79,9 @@ function sairDoCarrinho(){
 
 noneCarrinho()
 
+const btnCarrinhoResponsivo = document.querySelector('#mostrar-menu-responsivo')
+btnCarrinhoResponsivo.addEventListener('click',()=>{
+    esconderMenuResponsivo()
+    mostrarCarrinho()
+})
 
