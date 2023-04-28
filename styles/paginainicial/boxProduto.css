@@ -11,7 +11,7 @@
     animation-name: main;
 	animation-duration: 2s;
     flex-wrap: wrap;
-   
+    background-color: #fff;
 }
 
 .grupoDeImagensCarrosel{
@@ -24,6 +24,7 @@
     align-items:center;
     animation-name: carroseldosprodutos;
 	animation-duration: 1s;
+    background-color: #902c2c;
 }
 @keyframes carroseldosprodutos{
 	0% {opacity: 0;transform: translate(-30px, 0px);}
@@ -42,13 +43,13 @@
 }
 .boxProdutoCarrosel{
     background-color: rgb(251, 251, 251);
-    width: 33%;
-    min-width: 190px;
-    max-width: 400px;
-    height: 500px;
+    box-shadow: 1px 2px 2px rgb(148, 148, 148);
+    flex: 1 0 300px ;
+    height:auto;
+    min-width: 400px;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     display: flex;
     padding: 10px;
@@ -95,14 +96,15 @@
 @media(max-width:800px){
     .boxProdutoCarrosel{
         background-color: rgb(251, 251, 251);
-        width: 80%;
+        width: 100%;
         min-width: 100px;
         min-width: 250px;
+        height: auto;
        
        
     }
     
 .grupoDeImagensCarrosel{
-    width: 80%;
+    width: 100%;
 }
 }
