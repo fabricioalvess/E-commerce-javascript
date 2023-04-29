@@ -14,5 +14,5 @@ function abrirMenuResponsivo(){
 }
 function esconderMenuResponsivo(){
     // mostrarMenu.classList.remove('ativa')
-    mostrarMenu.style.right="-320px"
+    mostrarMenu.style.right="-400px"
 }

@@ -12,7 +12,6 @@ var sobre = [
         "imagem": "https://raw.githubusercontent.com/fabricioalvess/E-commerce-javascript/master/img/banner3.png"
     }
 ]
-const x = document.querySelectorAll('.xxx')
 const setaAnterior = document.getElementById("seta_sobre_anterior")
 const setaFrente = document.getElementById("seta_sobre_frente")
 const sobreTitulo = document.getElementById("sobre_titulo")

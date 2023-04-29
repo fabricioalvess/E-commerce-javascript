@@ -37,8 +37,6 @@
     border-radius: 5px;
 }
 .carrinho-de-compra{
-    transform: translatey(-5px);
-      transition: all .50s ease;
     width: 40%;
     min-height: 400px;
     min-height: auto;
@@ -63,22 +61,16 @@
     font-size: 16px;
     cursor: pointer;
     font-weight: 300;
-   
-        transition: all .5s ease;
 }
 .btnCarrinho:hover{
     background: linear-gradient(90deg, #323960 0%, #252d5b 35%, #1b255f 100%);
     color: white;
     font-weight: 300;
-    transform: translatey(-5px);
-    transition: all .50s ease;
+
 }
 
-
-
 .produto-no-carrinho{
-    transform: translatey(-5px);
-    transition: all .50s ease;
+   
     position: relative;
     margin:0 10px;
     width: 80%;
@@ -194,8 +186,6 @@
         
     }
     .carrinho-de-compra{
-        transform: translatey(-5px);
-        transition: all .50s ease;
         width: 100%;
         min-height: 400px;
         min-height: auto;

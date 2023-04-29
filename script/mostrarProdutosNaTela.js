@@ -1,5 +1,5 @@
-const grupoDeElementos = document.querySelectorAll('.boxProdutoCarrosel')
 var listaNoCarrinho =  []
+const grupoDeElementos = document.querySelectorAll('.boxProdutoCarrosel')
 const localStorageRecuperada = localStorage.getItem('listaNoCarrinho')
 const grupoDeImagensCarrosel = document.querySelector('#grupoDeImagensCarrosel')
 const setaFrenteBanner = document.querySelector('#seta_sobre_frente')
@@ -130,6 +130,9 @@ function noneProdutos(){
 function initialProdutos(){
     containerDeProdutos.style.display="flex"
     containerDeProdutos.style.padding="0"  
+}
+function noneCarrinho(){
+    carrinhoDeCompra.style.display="none"
 }
 
 

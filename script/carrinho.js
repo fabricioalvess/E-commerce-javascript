@@ -78,7 +78,3 @@ function procedimentosParaMostrarCarrinhoAPartirDoMenuResponsivo(){
 }
 
 noneCarrinho()
-function noneCarrinho(){
-    carrinhoDeCompra.style.display="none" 
-}
-
