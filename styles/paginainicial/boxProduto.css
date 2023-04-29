@@ -56,6 +56,11 @@
     padding: 10px;
 
 }
+.boxProdutoCarrosel:hover{
+    transform: translatey(-10px);
+    transition: all .5s ease;
+
+}
 
 .boxProdutoCarrosel img{
     width:80%;

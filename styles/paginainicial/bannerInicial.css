@@ -6,9 +6,12 @@
 	animation-name: main;
 	animation-duration: 1s;
     
+    transition: all 2s ease;
 }
+
 #sobre_imagem img{
     width: 100%;
+    transform: translatey();
    
 }
 
@@ -16,15 +19,6 @@
 	0% {opacity: 0;transform: translate(-10px, 0px);}
 	100%{opacity: 1; transform: translate(0px, 0px);}
 }
-
-@media (max-width: 862px)
-{
-    
-}
-
-
-
-
 
 #conjunto_seta_sobre{
     margin-top: -30px;
@@ -36,6 +30,8 @@
    
  
 }
+
+
     #seta_sobre_anterior{
         width: 10%;
         font-weight: bold;
@@ -58,6 +54,7 @@
         transition: all .5s ease;
     }
     #seta_sobre_frente:hover{
+       
         transform: translatey(-5px);
         transition: all .5s ease;
     }
@@ -84,7 +81,7 @@
 @media (max-width:800px) {
    
     .bannerInicial{
-        padding-top: 180px;
+        padding-top: 115px;
         height:auto;
        
         display: flex;
