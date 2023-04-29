@@ -109,7 +109,7 @@ function manipulaFiltragem(){
                     let filtroPesquisa = pesquisa.value.toLowerCase()
                     if(!t.includes(filtroPesquisa)){
                         produto.style.display="none"
-                        noneBanners()
+                        bannerTopo.style.display="none"
                     }else{
                         produto.style.display="flex"
                     }
@@ -124,24 +124,14 @@ function manipulaFiltragem(){
 }
 
 function noneProdutos(){
-    containerDeProdutos.style.display="none"
-    
-}
-function noneCarrinho(){
-    carrinhoDeCompra.style.display="none"
-    
+    containerDeProdutos.style.display="none"  
 }
 
 function initialProdutos(){
     containerDeProdutos.style.display="flex"
-    containerDeProdutos.style.padding="0"
-    
+    containerDeProdutos.style.padding="0"  
 }
 
-function initialBanners(){
-    bannerTopo.style.display="flex"
-    
-}
 
 
 

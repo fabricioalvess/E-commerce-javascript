@@ -46,9 +46,8 @@
 }
 .boxProdutoCarrosel{
     background-color: rgb(251, 251, 251);
-    flex: 1 0 300px ;
+    flex: 1 0 350px ;
     height:auto;
-    min-width: 400px;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -96,10 +95,7 @@
 @media(max-width:800px){
     .boxProdutoCarrosel{
         background-color: rgb(251, 251, 251);
-        width: 100%;
-        min-width: 100px;
-        min-width: 250px;
-        height: auto;
+       
        
        
     }
