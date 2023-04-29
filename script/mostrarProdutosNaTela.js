@@ -1,15 +1,19 @@
 const grupoDeElementos = document.querySelectorAll('.boxProdutoCarrosel')
+var listaNoCarrinho =  []
+const localStorageRecuperada = localStorage.getItem('listaNoCarrinho')
 const grupoDeImagensCarrosel = document.querySelector('#grupoDeImagensCarrosel')
-const bannerTopo = document.querySelector('.bannerInicial')
-const containerDeProdutos = document.querySelector('.carrosel')
+const setaFrenteBanner = document.querySelector('#seta_sobre_frente')
 const botaoPesquisa = document.querySelector('#botao-pesquisa')
+const setaAnteriorBanner = document.querySelector('#seta_sobre_anterior')
 const pesquisa = document.getElementById('pesquisa')
 const itemNoCarrinho = document.querySelector('#item-no-carrinho')
 const botaoCarrinho = document.querySelector('#botao-carrinho')
 const btnCat = document.querySelectorAll('.botaoCategoria')
+const barraPesquisa = document.querySelector('.barra-pesquisa')
+const containerDeProdutos = document.querySelector('.carrosel')
+const bannerTopo = document.querySelector('.bannerInicial')
 
-var listaNoCarrinho =  []
-const localStorageRecuperada = localStorage.getItem('listaNoCarrinho')
+
 
 function atualizaLocalStorage(){
     localStorage.setItem('listaNoCarrinho',JSON.stringify(listaNoCarrinho))
@@ -48,9 +52,7 @@ function criandoProdutos(produto){
     }) 
    
     const dataProduto = document.querySelectorAll('[data-produto]')
-    
     adicionandoProdutoEmLista(dataProduto)
-   
    
 }
 
@@ -121,10 +123,6 @@ function manipulaFiltragem(){
     },500)     
 }
 
-function noneBanners(){
-    bannerTopo.style.display="none"
-    
-}
 function noneProdutos(){
     containerDeProdutos.style.display="none"
     
@@ -133,10 +131,7 @@ function noneCarrinho(){
     carrinhoDeCompra.style.display="none"
     
 }
-function initialCarrinho(){
-    carrinhoDeCompra.style.display="flex"
-    
-}
+
 function initialProdutos(){
     containerDeProdutos.style.display="flex"
     containerDeProdutos.style.padding="0"

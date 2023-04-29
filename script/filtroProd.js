@@ -1,19 +1,16 @@
 const botoesCategoria = document.querySelectorAll('.botaoCategoria')
-botoesCategoria.forEach(botao=>{
+
+botoesCategoria.forEach(botao => {
     botao.addEventListener('click', btn =>{
         var idCategoria = btn.target.value
+        bannerTopo.style.display="none" 
         filtrarProdutos(idCategoria)
-        sairDoCarrinho()
-        noneBanners()
-        
-    })
-})
+})})
 
 function filtrarProdutos(elemento){
     const categoria = elemento
-    const filtro = categoria != ""?produtos.filter(p => p.categoria == categoria):alert("Categoria não encontrada!")
+    const filtro = categoria != ""?produtos.filter(p => p.categoria == categoria):''
     criandoProdutos(filtro)
-   
 }
 
 

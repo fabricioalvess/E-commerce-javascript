@@ -1,16 +1,19 @@
 const carrinhoDeCompra =document.querySelector('.grupo-de-elementos')
+const menu = document.querySelector('.menu')
+const btnCarrinhoResponsivo = document.querySelector('#mostrar-menu-responsivo')
 const x = document.querySelector('.carrinho-de-compra')
-
-
-
 botaoCarrinho.addEventListener('click',mostrarCarrinho)
+btnCat.forEach(btn =>{btn.addEventListener('click', ev => sairDoCarrinho(ev))})
+btnCarrinhoResponsivo.addEventListener('click', procedimentosParaMostrarCarrinhoAPartirDoMenuResponsivo)
+
+
+
+
 function mostrarCarrinho(x){
+    produtoNoCarrinho()
     bannerTopo.style.display="none"
     containerDeProdutos.style.display="none"
-    
-    initialCarrinho()
-    produtoNoCarrinho()
-    
+    carrinhoDeCompra.style.display="flex"  
 }
 
 function produtoNoCarrinho(){
@@ -47,41 +50,31 @@ function produtoNoCarrinho(){
                 </div>
             </div>
             `
-           
-        })
-        x.parentElement.children[0].childNodes[1].childNodes[1]
-        x.addEventListener('click', excluirDoCarrinho)
-        x.addEventListener('click', produtoNoCarrinho)
-   
-    }
+    })
+}
+
+x.addEventListener('click', el =>  excluirDoCarrinho(el)) 
     
 function excluirDoCarrinho(x){
     let elemento = x.target.parentNode.parentElement
+   elemento.remove()
     listaNoCarrinho.splice(elemento,1)
-    elemento.remove()
     atualizaLocalStorage()
-    
 }
     
-function sairDoCarrinho(){
-    btnCat.forEach(btn =>{
-        btn.addEventListener('click', ev =>{
-            let nomeId = ev.target.attributes[1].textContent
-            let valueCategoria = ev.target.textContent
-            let chave = `categoria_${valueCategoria}`
-             nomeId.textContent == chave.textContent? containerDeProdutos.style.display="flex" :  carrinhoDeCompra.style.display="none"
-             carrinhoDeCompra.style.display="none"
-           })
-    })
-    
+function sairDoCarrinho(ev){
+    const nomeId = ev.target.attributes[1].textContent
+    const valueCategoria = ev.target.textContent
+    const chave = `categoria_${valueCategoria}`
+    nomeId.textContent == chave.textContent? containerDeProdutos.style.display="flex" :   carrinhoDeCompra.style.display="none"  
+    carrinhoDeCompra.style.display="none"   
 }
 
-
-noneCarrinho()
-
-const btnCarrinhoResponsivo = document.querySelector('#mostrar-menu-responsivo')
-btnCarrinhoResponsivo.addEventListener('click',()=>{
+function procedimentosParaMostrarCarrinhoAPartirDoMenuResponsivo(){   
     esconderMenuResponsivo()
     mostrarCarrinho()
-})
+    barraPesquisa.style.display="none"
+    menu.style.height="40px"
+}
 
+noneCarrinho()

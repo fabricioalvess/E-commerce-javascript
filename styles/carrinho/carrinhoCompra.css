@@ -199,4 +199,8 @@
         box-sizing: border-box;
         
     }
+    .btnCarrinho:hover{
+        background: linear-gradient(90deg, #323960 0%, #252d5b 35%, #1b255f 100%);
+    }
+    
 }
