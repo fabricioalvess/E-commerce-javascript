@@ -82,20 +82,8 @@ const produtos = [
 
 function pegarApi(){
     criandoProdutos(produtos)
-    manipulaFiltragem(produtos)   
+    manipulaFiltragem(produtos)  
+
 }
 pegarApi()
 
-
-
-
-const endpointDaAPI = "db.json"
-getBuscarLivrosDaAPI()
-
-
-async function getBuscarLivrosDaAPI(){
-    const res = await fetch(endpointDaAPI)
-    livros = await res.json()
-    let livrosComDesconto = aplicarDesconto(livros)
-    exibirOsLivrosNaTela(livrosComDesconto)
-}

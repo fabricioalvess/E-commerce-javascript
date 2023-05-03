@@ -17,17 +17,6 @@ const setaFrente = document.getElementById("seta_sobre_frente")
 const sobreTitulo = document.getElementById("sobre_titulo")
 const sobreImagem = document.getElementById("sobre_imagem")
 
-
-    
-    
-
- 
-
-
-
-
-
-
 var atual_sobre = 0;
 var ant, fre;
 

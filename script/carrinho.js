@@ -41,23 +41,41 @@ function produtoNoCarrinho(){
                 <div class="row">
                     <div class="quantidade">
                         <span>-</span>
-                        <input type="number" value="${produto.quantidade}"/>
+                        <input type="number" value="0"/>
                         <span>+</span>
                     </div>
                     <div class="valor-do-produto">
-                        <h2>R$:${produto.preco} </h2>
+                   <h2> ${produto.preco} </h2>
                     </div>
                 </div>
             </div>
             `
+           
+    })
+ 
+    const controles = document.querySelectorAll('.quantidade span')
+    controles.forEach( controle => controle.addEventListener('click', evento => {gerarQuantidadeDoProdutoNoCarrinho(evento)}))
+    const botaoExcluirCarrinho = document.querySelectorAll('.excluir-do-carrinho')
+    botaoExcluirCarrinho.forEach(elemento => {elemento.addEventListener('click', evento => excluirDoCarrinho(evento))   
     })
 }
 
-x.addEventListener('click', el =>  excluirDoCarrinho(el)) 
-    
+function gerarQuantidadeDoProdutoNoCarrinho(evento){
+    const valorDoInput = evento.target.parentElement.children[1]
+    const precoUnidade = evento.target.parentElement.parentNode.children[1].textContent
+
+    if(evento.target.textContent == "+"){
+        valorDoInput.value =  parseInt(valorDoInput.value) + 1
+        precoUnidade.textContent=""    
+  }else{
+    valorDoInput.value =parseInt( valorDoInput.value )- 1
+  }
+  
+}
+
 function excluirDoCarrinho(x){
     let elemento = x.target.parentNode.parentElement
-   elemento.remove()
+    elemento.remove()
     listaNoCarrinho.splice(elemento,1)
     atualizaLocalStorage()
 }

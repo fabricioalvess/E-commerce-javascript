@@ -13,8 +13,6 @@ const barraPesquisa = document.querySelector('.barra-pesquisa')
 const containerDeProdutos = document.querySelector('.carrosel')
 const bannerTopo = document.querySelector('.bannerInicial')
 
-
-
 function atualizaLocalStorage(){
     localStorage.setItem('listaNoCarrinho',JSON.stringify(listaNoCarrinho))
 }
@@ -30,6 +28,7 @@ if(localStorageRecuperada){
 function criandoProdutos(produto){
     grupoDeImagensCarrosel.innerHTML=""
     produto.forEach((p, index) =>{
+        p.id = index
         const divPai = document.createElement('div')
         divPai.classList.add('boxProdutoCarrosel')
         const imgFilho1 = document.createElement('img')
@@ -38,7 +37,8 @@ function criandoProdutos(produto){
         h2Filho2.classList.add('tituloProduto')
         h2Filho2.innerHTML=p.descricao
         const h3Filho3 = document.createElement('h3')
-        h3Filho3.innerHTML= "$" + p.preco
+        h3Filho3.classList.add('pegarPreco')
+        h3Filho3.innerHTML= p.preco
         const comprar = document.createElement('span')
         comprar.innerHTML="carrinho"
         comprar.classList.add('btnCarrinho')
@@ -49,15 +49,15 @@ function criandoProdutos(produto){
         divPai.appendChild(comprar)
         divPai.dataset.produto = index
         grupoDeImagensCarrosel.appendChild(divPai)  
+            
     }) 
-   
+    const elementoProduto = produto
     const dataProduto = document.querySelectorAll('[data-produto]')
-    adicionandoProdutoEmLista(dataProduto)
-   
+    adicionandoProdutoEmLista(dataProduto, elementoProduto)
 }
 
 function adicionandoProdutoEmLista(dataProduto){
-    dataProduto.forEach(item =>{
+    dataProduto.forEach((item) =>{
         item.addEventListener('click' , el => {
             const img = el.target.parentElement.children[0]
             const descricao = el.target.parentElement.children[1].textContent
@@ -74,20 +74,24 @@ function adicionandoProdutoEmLista(dataProduto){
             }
             itemNoCarrinho.innerHTML=""
            
+            
             const existe = listaNoCarrinho.find(elemento => elemento.descricao === descricao)
+           
             if(existe){
-              alert('Item adicionado no carrinho!')
-              
+                alert('Item adicionado no carrinho!')
+                
+                
             }else{
-                listaNoCarrinho.push(novoItem)           
-               
-            }   
+                novoItem.id = listaNoCarrinho.length
+                listaNoCarrinho.push(novoItem)   
+                 
+            }
+
             produtoNoCarrinho(listaNoCarrinho)
             atualizaLocalStorage()
         })   
     })
-    buscarPelaBarraDePesquisa() 
-    
+    buscarPelaBarraDePesquisa()   
 }
 
 
