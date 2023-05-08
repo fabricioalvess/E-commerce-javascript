@@ -99,29 +99,34 @@ function produtoNoCarrinho(){
 
             itemNoCarrinho.appendChild(main)
         })
-        
+        var preco = document.querySelector('.pegarValor')
+    
+        valorTotal(preco)
         const botaoExcluirCarrinho = document.querySelectorAll('.excluir-do-carrinho')
         botaoExcluirCarrinho.forEach(elemento => {elemento.addEventListener('click', evento => excluirDoCarrinho(evento))   
     })
             valorTotal()
 }
 
-function valorTotal(){
-   
+function valorTotal(param){
     const controle =  document.querySelectorAll('[data-controle]')
     controle.forEach(elemento => elemento.addEventListener('click',evento =>{
         var elementoSelecionado = evento.target.parentElement.parentElement.parentElement
-        console.log(elementoSelecionado)
-        var numeroControle = elementoSelecionado.querySelector('[data-contador]')
+        var precoProduto = elementoSelecionado.querySelector('.valor-do-produto')
+        precoProduto.style.fontSize='18px';
+        precoProduto.style.fontWeight = "400"; 
+        precoProduto.style.color='rgb(90, 89, 89)';
        
-        var preco = document.querySelector('.pegarValor')
+        var numeroControle = elementoSelecionado.querySelector('[data-contador]')
+       var preco = param
         preco = preco.textContent.replace(',','.')
+        
         if(evento.target.innerText == '-' ){
             numeroControle.value = parseInt(numeroControle.value)-1
             if(numeroControle.value < 0){
                 numeroControle.value = 0
-             }
-         }else if(evento.target.innerText == '+'){
+            }
+        }else if(evento.target.innerText == '+'){
              numeroControle.value = parseInt(numeroControle.value)+1
              if(numeroControle.value > 10){
                  numeroControle.value = 10
@@ -129,8 +134,9 @@ function valorTotal(){
          } 
          let precoAtualizadoQuantidade = 0
          precoAtualizadoQuantidade += numeroControle.value * preco
-         var precoProduto = elementoSelecionado.querySelector('.valor-do-produto')
+        
          precoProduto.innerHTML = precoAtualizadoQuantidade.toFixed(2)
+        
     }))
 }
 
