@@ -19,58 +19,119 @@ function mostrarCarrinho(x){
 function produtoNoCarrinho(){
     itemNoCarrinho.innerHTML=""
     listaNoCarrinho.forEach((produto, index)=>{
-        itemNoCarrinho.innerHTML +=` 
-            <div class="produto-no-carrinho" data-id="${index}" >
-                <div class="excluir-do-carrinho" id="btn-excluir">
-                    <i class="fa-solid fa-trash" style="color: #000000;"></i>
-                </div>
-                <div class="imagem">
-                    <img src="${produto.img}" alt="">
-                </div>
-                <div class="row-texto">
-                    <div class="descricao-do-produto">
-                        <h3>${produto.descricao} </h3>
-                    </div>
-                    <div class="cor">
-                        <h3>cor:${produto.cor} </h3>
-                    </div>
-                    <div class="tamanho">
-                        <h3>tamanho: ${produto.tamanho} </h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="quantidade">
-                        <span>-</span>
-                        <input type="number" value="0"/>
-                        <span>+</span>
-                    </div>
-                    <div class="valor-do-produto">
-                   <h2> ${produto.preco} </h2>
-                    </div>
-                </div>
-            </div>
-            `
-           
+    
+            const main = document.createElement('div')
+            main.classList.add('produto-no-carrinho')
+            main.dataset.id=index
+
+                const excluirItem = document.createElement('div')
+                excluirItem.classList.add('excluir-do-carrinho')
+                excluirItem.setAttribute('id','btn-excluir')
+                excluirItem.innerHTML= `<i class="fa-solid fa-trash" style="color: #000000;"></i>`
+
+                const imagem = document.createElement('div')
+                imagem.classList.add('imagem')
+                    const srcDaImagem = document.createElement('img')
+                    srcDaImagem.src = produto.img
+                    imagem.appendChild(srcDaImagem)
+                
+            main.appendChild(excluirItem)
+            main.appendChild(imagem)
+
+                const textos = document.createElement('div')
+                textos.classList.add('row-texto')
+                    const descricaoDoProduto = document.createElement('div')
+                    descricaoDoProduto.classList.add('descricao-do-produto')
+                    const h3 = document.createElement('h3')
+                    h3.innerHTML = produto.descricao
+                    descricaoDoProduto.appendChild(h3)
+                    textos.appendChild(descricaoDoProduto)
+                    
+                    const cor = document.createElement('div')
+                    cor.classList.add('cor')
+                        cor.innerHTML = `<h3>${produto.cor}</h3>`
+
+                    const tamanho = document.createElement('div')
+                        tamanho.classList.add('tamanho')
+                        tamanho.innerHTML = `<h3>${produto.tamanho}</h3>`  
+
+                textos.appendChild(descricaoDoProduto)
+                textos.appendChild(h3)   
+                textos.appendChild(cor)   
+                textos.appendChild(tamanho) 
+
+                const row = document.createElement('div')
+                row.classList.add('row')
+                    const quantidade = document.createElement('div')
+                    quantidade.classList.add('quantidade')
+                    
+                        const controleMenos = document.createElement('span')
+                        controleMenos.dataset.controle='-'
+                        controleMenos.innerHTML = '-'
+
+                        const inputQuantidade = document.createElement('input')
+                        inputQuantidade.type = 'number'
+                        inputQuantidade.dataset.contador='contador'
+                        inputQuantidade.value = 1
+                        
+                        const controleMais = document.createElement('span')
+                        controleMais.dataset.controle='+'
+                        controleMais.innerHTML = '+'
+
+                    quantidade.appendChild(controleMenos)
+                    quantidade.appendChild(inputQuantidade)
+                    quantidade.appendChild(controleMais)
+
+                    const valorProduto = document.createElement('div')
+                    valorProduto.classList.add('valor-do-produto')
+                    valorProduto.innerHTML = 'R$: '
+                    const valor = document.createElement('h2')
+                    valor.classList.add('pegarValor')
+                    valor.innerHTML = produto.preco
+                    valorProduto.appendChild(valor)
+                    
+
+                row.appendChild(quantidade)
+                row.appendChild(valorProduto)
+
+            main.appendChild(textos)
+            main.appendChild(row)
+
+            itemNoCarrinho.appendChild(main)
+        })
+        
+        const botaoExcluirCarrinho = document.querySelectorAll('.excluir-do-carrinho')
+        botaoExcluirCarrinho.forEach(elemento => {elemento.addEventListener('click', evento => excluirDoCarrinho(evento))   
     })
- 
-    const controles = document.querySelectorAll('.quantidade span')
-    controles.forEach( controle => controle.addEventListener('click', evento => {gerarQuantidadeDoProdutoNoCarrinho(evento)}))
-    const botaoExcluirCarrinho = document.querySelectorAll('.excluir-do-carrinho')
-    botaoExcluirCarrinho.forEach(elemento => {elemento.addEventListener('click', evento => excluirDoCarrinho(evento))   
-    })
+            valorTotal()
 }
 
-function gerarQuantidadeDoProdutoNoCarrinho(evento){
-    const valorDoInput = evento.target.parentElement.children[1]
-    const precoUnidade = evento.target.parentElement.parentNode.children[1].textContent
-
-    if(evento.target.textContent == "+"){
-        valorDoInput.value =  parseInt(valorDoInput.value) + 1
-        precoUnidade.textContent=""    
-  }else{
-    valorDoInput.value =parseInt( valorDoInput.value )- 1
-  }
-  
+function valorTotal(){
+   
+    const controle =  document.querySelectorAll('[data-controle]')
+    controle.forEach(elemento => elemento.addEventListener('click',evento =>{
+        var elementoSelecionado = evento.target.parentElement.parentElement.parentElement
+        console.log(elementoSelecionado)
+        var numeroControle = elementoSelecionado.querySelector('[data-contador]')
+       
+        var preco = document.querySelector('.pegarValor')
+        preco = preco.textContent.replace(',','.')
+        if(evento.target.innerText == '-' ){
+            numeroControle.value = parseInt(numeroControle.value)-1
+            if(numeroControle.value < 0){
+                numeroControle.value = 0
+             }
+         }else if(evento.target.innerText == '+'){
+             numeroControle.value = parseInt(numeroControle.value)+1
+             if(numeroControle.value > 10){
+                 numeroControle.value = 10
+             }
+         } 
+         let precoAtualizadoQuantidade = 0
+         precoAtualizadoQuantidade += numeroControle.value * preco
+         var precoProduto = elementoSelecionado.querySelector('.valor-do-produto')
+         precoProduto.innerHTML = precoAtualizadoQuantidade.toFixed(2)
+    }))
 }
 
 function excluirDoCarrinho(x){

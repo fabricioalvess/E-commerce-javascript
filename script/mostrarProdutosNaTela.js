@@ -12,7 +12,6 @@ const btnCat = document.querySelectorAll('.botaoCategoria')
 const barraPesquisa = document.querySelector('.barra-pesquisa')
 const containerDeProdutos = document.querySelector('.carrosel')
 const bannerTopo = document.querySelector('.bannerInicial')
-
 function atualizaLocalStorage(){
     localStorage.setItem('listaNoCarrinho',JSON.stringify(listaNoCarrinho))
 }
@@ -91,7 +90,8 @@ function adicionandoProdutoEmLista(dataProduto){
             atualizaLocalStorage()
         })   
     })
-    buscarPelaBarraDePesquisa()   
+    buscarPelaBarraDePesquisa()  
+     
 }
 
 
