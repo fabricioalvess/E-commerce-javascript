@@ -123,18 +123,19 @@
     line-height: 10px;
 }
 .quantidade{
-    width: 50%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .quantidade input{
-    width: 10%;
-    border: none;
+    width: 50%;
+    border:2px solid rgb(207, 206, 206);
     appearance:textfield;
     text-align: center;
-    border: 1px solid rgb(207, 206, 206);
+    border-radius: 10px;
+    padding: 5px;
 }
 .valor-do-produto{
     width: 50%;
@@ -143,7 +144,14 @@
     justify-content: center;
    
 }
-
+.quantidade span{
+    margin: 5px;
+    padding: 0 10px;
+    font-weight: bolder;
+    border-radius: 10px;
+    border: 2px solid rgb(216, 216, 216);
+    cursor: pointer;
+}
 .pegarValor{
     font-size: 18px;
     font-weight: 400;
@@ -165,9 +173,28 @@
     justify-content:space-between;
 }
 .excluir-do-carrinho{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
     position: absolute;
     top: 10px;
     right: 10px;
+    cursor: pointer;
+    transform: translatey(-1px);
+   transition: all .2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.excluir-do-carrinho:hover{
+    width: 35px;
+    transform: translatey(-1px);
+    transition: all .2s ease;
+    height: 35px;
+    background-color: #e6e6e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 @media(max-width:800px){
     .main-compra{
@@ -195,7 +222,8 @@
         align-items:center;
         justify-content: center;
         flex-direction: column;
-        box-sizing: border-box;
+        box-sizing: border-box; transform: translatey(-1px);
+        transition: all .2s ease;
         
     }
     .btnCarrinho:hover{

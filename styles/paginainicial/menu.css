@@ -56,7 +56,9 @@
     position: absolute;
     top: 18px;
     right: 60px;
+    cursor: pointer;
  }
+ 
  .carrinho{
     width: 33%;
     min-width: 300px;
@@ -96,7 +98,6 @@
     width: 25%;
     height: 30px;
     font-weight: normal;
-    color: var(--secundary-color);
 }
 .botao-menu-responsivo{
     display: none;

@@ -123,8 +123,11 @@ function valorTotal(param){
         
         if(evento.target.innerText == '-' ){
             numeroControle.value = parseInt(numeroControle.value)-1
-            if(numeroControle.value < 0){
+            if(numeroControle.value <= 0){
                 numeroControle.value = 0
+                elementoSelecionado.remove()
+                listaNoCarrinho.splice(elementoSelecionado,1)
+                atualizaLocalStorage()
             }
         }else if(evento.target.innerText == '+'){
              numeroControle.value = parseInt(numeroControle.value)+1
